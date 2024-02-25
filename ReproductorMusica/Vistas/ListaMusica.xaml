@@ -1,12 +1,67 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ReproductorMusica.Vistas.ListaMusica">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+<ContentPage
+    x:Class="ReproductorMusica.Vistas.ListaMusica"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:cardview="clr-namespace:PanCardView;assembly=PanCardView"
+    xmlns:sharpnado="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame"
+    NavigationPage.HasNavigationBar="False">
+    <Grid BackgroundColor="#fec5bb" RowDefinitions="auto,*,*,*">
+        <StackLayout
+            Grid.Row="0"
+            Margin="20,5,20,0"
+            HeightRequest="20"
+            Orientation="Horizontal">
+            <Image Source="campana.png" />
+            <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                <Label
+                    FontAttributes="Bold"
+                    Text="Podcast"
+                    TextColor="#264653" />
+                <Image Source="microfono.png" />
+            </StackLayout>
+            <Image Source="lupa.png" />
         </StackLayout>
-    </ContentPage.Content>
+        <cardview:CoverFlowView
+            Grid.Row="1"
+            IsCyclical="True"
+            ItemsSource="{Binding ListaMusica}">
+            <cardview:CoverFlowView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="40">
+                        <Frame
+                            Padding="0"
+                            BackgroundColor="#fae1dd"
+                            CornerRadius="18"
+                            HasShadow="false">
+                            <Image Aspect="AspectFill" Source="{Binding Icono}" />
+                        </Frame>
+                        <Grid Margin="10" VerticalOptions="End">
+                            <sharpnado:MaterialFrame
+                                CornerRadius="18"
+                                MaterialBlurStyle="Dark"
+                                MaterialTheme="AcrylicBlur" />
+                            <StackLayout Margin="15,0" VerticalOptions="Center">
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="Medium"
+                                    Text="{Binding Nombre}"
+                                    TextColor="White" />
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="12"
+                                    Text="{Binding Autor}"
+                                    TextColor="LightGray" />
+                            </StackLayout>
+                            <Image
+                                Margin="20"
+                                HeightRequest="50"
+                                HorizontalOptions="EndAndExpand"
+                                Source="play.png" />
+                        </Grid>
+                    </Grid>
+                </DataTemplate>
+            </cardview:CoverFlowView.ItemTemplate>
+        </cardview:CoverFlowView>
+    </Grid>
 </ContentPage>

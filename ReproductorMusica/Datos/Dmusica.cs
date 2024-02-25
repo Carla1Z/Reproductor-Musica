@@ -1,7 +1,5 @@
 ﻿using ReproductorMusica.Modelo;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ReproductorMusica.Datos
@@ -30,7 +28,7 @@ namespace ReproductorMusica.Datos
                 {
                     Nombre = "Candy Store",
                     Autor = "Heathers",
-                    Icono = "https://i.ibb.co/G3kX5B7/heathers.jpg",
+                    Icono = "https://i.ibb.co/M22YSdX/heathers.jpg",
                     Url = "https://firebasestorage.googleapis.com/v0/b/musicaapp-3e31c.appspot.com/o/Heathers%20-%20Candy%20Store.mp3?alt=media&token=4d1312f5-152b-4b3e-9e19-a83a7457d895"
                 },
                 new Mmusica()
@@ -58,7 +56,7 @@ namespace ReproductorMusica.Datos
                 {
                     Nombre = "Me To",
                     Autor = "Meghan Trainor",
-                    Icono = "https://i.ibb.co/NN0x8PW/Meghan-Trainor.png",
+                    Icono = "https://i.ibb.co/pbMLGtX/Meghan-Trainor.jpg",
                     Url = "https://firebasestorage.googleapis.com/v0/b/musicaapp-3e31c.appspot.com/o/Meghan%20Trainor%20-%20Me%20To.mp3?alt=media&token=7b4183f8-7050-48cc-84ae-d86b7e1ccabd"
 
                 },
@@ -80,7 +78,7 @@ namespace ReproductorMusica.Datos
                 {
                     Nombre = "The Greatest Show",
                     Autor = "The Greatest Showman",
-                    Icono = "https://i.ibb.co/8MRDDLT/The-Greatest-Showman.jpg",
+                    Icono = "https://i.ibb.co/KzHgw0x/The-Greatest-Showman.jpg",
                     Url = "https://firebasestorage.googleapis.com/v0/b/musicaapp-3e31c.appspot.com/o/The%20Greatest%20Showman%20-%20The%20Greatest%20Show.mp3?alt=media&token=0e4e1a91-4baa-4644-b4ae-e7e3a4db6deb"
                 },
                 };

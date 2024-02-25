@@ -1,6 +1,5 @@
-﻿using System;
+﻿using ReproductorMusica.Vistas;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace ReproductorMusica
 {
@@ -10,7 +9,7 @@ namespace ReproductorMusica
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new ListaMusica());
         }
 
         protected override void OnStart()

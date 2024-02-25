@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using ReproductorMusica.VistaModelo;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +10,7 @@ namespace ReproductorMusica.Vistas
         public ListaMusica()
         {
             InitializeComponent();
+            BindingContext = new VMlistamusica(Navigation);
         }
     }
 }

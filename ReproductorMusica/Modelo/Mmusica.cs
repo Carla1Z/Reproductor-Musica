@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ReproductorMusica.Modelo
+﻿namespace ReproductorMusica.Modelo
 {
     public class Mmusica
     {

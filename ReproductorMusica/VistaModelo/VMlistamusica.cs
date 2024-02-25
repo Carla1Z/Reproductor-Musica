@@ -1,16 +1,13 @@
-﻿using ReproductorMusica.VistaModelo;
-using System;
+﻿using ReproductorMusica.Datos;
+using ReproductorMusica.Modelo;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
-using ReproductorMusica.Datos;
-using ReproductorMusica.Modelo;
 
 namespace ReproductorMusica.VistaModelo
 {
-    public class VMlistamusica:BaseViewModel
+    public class VMlistamusica : BaseViewModel
     {
         #region VARIABLES
         List<Mmusica> _listamusica;

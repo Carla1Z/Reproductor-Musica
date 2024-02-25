@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
 namespace ReproductorMusica.VistaModelo
 {
     public class BaseViewModel : INotifyPropertyChanged
