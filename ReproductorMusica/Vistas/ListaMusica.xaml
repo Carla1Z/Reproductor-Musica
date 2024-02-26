@@ -4,9 +4,17 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:cardview="clr-namespace:PanCardView;assembly=PanCardView"
+    xmlns:proc="clr-namespace:PanCardView.Processors;assembly=PanCardView"
     xmlns:sharpnado="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame"
+    xmlns:sombras="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows"
     NavigationPage.HasNavigationBar="False">
-    <Grid BackgroundColor="#fec5bb" RowDefinitions="auto,*,*,*">
+    <Grid BackgroundColor="#fec5bb" RowDefinitions="auto,*,180,auto">
+        <Grid.Background>
+            <LinearGradientBrush>
+                <GradientStop Offset="0" Color="#bcf4de" />
+                <GradientStop Offset="1" Color="#001524" />
+            </LinearGradientBrush>
+        </Grid.Background>
         <StackLayout
             Grid.Row="0"
             Margin="20,5,20,0"
@@ -26,6 +34,9 @@
             Grid.Row="1"
             IsCyclical="True"
             ItemsSource="{Binding ListaMusica}">
+            <x:Arguments>
+                <proc:CoverFlowProcessor ScaleFactor="0.75" />
+            </x:Arguments>
             <cardview:CoverFlowView.ItemTemplate>
                 <DataTemplate>
                     <Grid Margin="40">
@@ -63,5 +74,76 @@
                 </DataTemplate>
             </cardview:CoverFlowView.ItemTemplate>
         </cardview:CoverFlowView>
+        <StackLayout Grid.Row="2">
+            <Label
+                Margin="0,0,0,20"
+                FontAttributes="Bold"
+                FontSize="25"
+                HorizontalOptions="Center"
+                Text="Cantantes"
+                TextColor="White"
+                VerticalOptions="Center" />
+            <cardview:CoverFlowView ItemsSource="{Binding ListaMusica}" PositionShiftValue="200">
+                <cardview:CoverFlowView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="120,0">
+                            <Frame
+                                Padding="0"
+                                CornerRadius="18"
+                                HasShadow="False"
+                                Opacity="0.7">
+                                <Image Aspect="AspectFill" Source="{Binding Icono}" />
+                            </Frame>
+                            <BoxView BackgroundColor="#586f6b" CornerRadius="18">
+                                <BoxView.Background>
+                                    <LinearGradientBrush StartPoint="1,0">
+                                        <GradientStop Offset="0" Color="Transparent" />
+                                        <GradientStop Offset="1" Color="black" />
+                                    </LinearGradientBrush>
+                                </BoxView.Background>
+                            </BoxView>
+                            <Label
+                                Margin="20"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Center"
+                                Text="{Binding Autor}"
+                                TextColor="White"
+                                VerticalOptions="End" />
+                        </Grid>
+                    </DataTemplate>
+                </cardview:CoverFlowView.ItemTemplate>
+
+            </cardview:CoverFlowView>
+        </StackLayout>
+        <StackLayout
+            Grid.Row="3"
+            Margin="30"
+            HeightRequest="25"
+            Orientation="Horizontal">
+            <sombras:Shadows
+                CornerRadius="10"
+                HorizontalOptions="StartAndExpand"
+                Shades="{sombras:SingleShade Offset='0,0',
+                                             Opacity=0.5,
+                                             Color=White}">
+                <Image Source="home.png" />
+            </sombras:Shadows>
+            <sombras:Shadows
+                CornerRadius="10"
+                HorizontalOptions="CenterAndExpand"
+                Shades="{sombras:SingleShade Offset='0,0',
+                                             Opacity=0.5,
+                                             Color=White}">
+                <Image Source="comentario.png" />
+            </sombras:Shadows>
+            <sombras:Shadows
+                CornerRadius="10"
+                HorizontalOptions="EndAndExpand"
+                Shades="{sombras:SingleShade Offset='0,0',
+                                             Opacity=0.5,
+                                             Color=White}">
+                <Image Source="musica.png" />
+            </sombras:Shadows>
+        </StackLayout>
     </Grid>
 </ContentPage>
