@@ -9,7 +9,7 @@ namespace ReproductorMusica
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new ListaMusica());
+            MainPage = new NavigationPage(new Reproductor());
         }
 
         protected override void OnStart()

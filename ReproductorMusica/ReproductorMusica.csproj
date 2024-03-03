@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <PackageReference Include="CardsView" Version="2.8.1" />
+    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="4.1.0" />
     <PackageReference Include="Sharpnado.MaterialFrame" Version="1.3.0" />
     <PackageReference Include="Sharpnado.Shadows" Version="1.2.1" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2622" />
@@ -21,6 +22,9 @@
 
   <ItemGroup>
     <EmbeddedResource Update="Vistas\ListaMusica.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Vistas\Reproductor.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
