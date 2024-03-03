@@ -11,8 +11,8 @@
     <Grid BackgroundColor="#fec5bb" RowDefinitions="auto,*,180,auto">
         <Grid.Background>
             <LinearGradientBrush>
-                <GradientStop Offset="0" Color="#bcf4de" />
-                <GradientStop Offset="1" Color="#001524" />
+                <GradientStop Offset="0" Color="#FFF6B7 " />
+                <GradientStop Offset="1" Color="#F6416C" />
             </LinearGradientBrush>
         </Grid.Background>
         <StackLayout

@@ -6,6 +6,13 @@
     xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
     NavigationPage.HasNavigationBar="False">
     <Grid BackgroundColor="#cde5d7" VerticalOptions="FillAndExpand">
+        <Grid.Background>
+            <LinearGradientBrush>
+                <GradientStop Offset="0" Color="#FFF6B7 " />
+                <GradientStop Offset="1" Color="#F6416C" />
+            </LinearGradientBrush>
+        </Grid.Background>
+
         <lottie:AnimationView
             Animation="mascota.json"
             AutoPlay="True"
